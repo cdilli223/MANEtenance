@@ -1,0 +1,81 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666666;
+
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --muted: #a0a0a0;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* Layout: mobile-first, respects notches / safe areas */
+.app {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+}
+
+.app p {
+  color: var(--muted);
+}
+
+/* Tablet / desktop */
+@media (min-width: 768px) {
+  .app {
+    padding: 32px;
+  }
+}
