@@ -1,0 +1,6 @@
+Report ID:   e2cc5f07-2d92-4055-aa65-015eddf4e705
+Submitted:   2026-11-19T19:19:26.744Z
+Name:        Daniel Itzler
+UNI:         dri2105
+Appliance:   1st floor printer
+Description: the printer is broken
